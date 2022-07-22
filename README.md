@@ -3,7 +3,24 @@
 A Daemonset that does nothing, but has all your network utilities ready to go, 
 so you can test workloads in your Kubernetes cluster.
 
-## Kubernetes API and Kubelet
+## Utilities
+The image is based on [jonlabelle/network-tools](https://github.com/jonlabelle/docker-network-tools).
+Several utilities are installed including:
+- telnet
+- wget
+- curl
+- awk
+- jq
+- git
+- tcpdump
+- dig
+- nslookup
+- ping
+- traceroute
+- netstat
+- ... and more
+
+## Accessing the Kubernetes API and Kubelet
 
 Uses RBAC to leverage the Kubernetes API and Kubelet.
 
@@ -22,20 +39,3 @@ To get a list of pods from the Kubelet run:
 ```shell
 kcurl $KUBELET/pods
 ```
-
-## Utilities
-The image is based on [jonlabelle/network-tools](https://github.com/jonlabelle/docker-network-tools).
-Several utilities are installed including:
-- telnet
-- wget
-- curl
-- awk
-- jq
-- git
-- tcpdump
-- dig
-- nslookup
-- ping
-- traceroute
-- netstat
-- ... and more
