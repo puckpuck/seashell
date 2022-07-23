@@ -3,6 +3,15 @@
 A Daemonset that does nothing, but has all your network utilities ready to go, 
 so you can test workloads in your Kubernetes cluster.
 
+## Warning
+The ClusterRole used to set up this tool provides read access to **ALL** resources
+in your Kubernetes cluster. This isn't recommended for anything that even comes
+close to a production environment. Please know what the fuck you are doing before
+you deploy this thing blindly to your Kubernetes cluster.
+
+You are encouraged to modify the ClusterRole to restrict to specific resources
+before deploying.
+
 ## Utilities
 The image is based on [jonlabelle/network-tools](https://github.com/jonlabelle/docker-network-tools).
 Several utilities are installed including:

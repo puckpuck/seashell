@@ -29,63 +29,9 @@ metadata:
   namespace: utils
 rules:
   - apiGroups:
-      - ""
+      - "*"
     resources:
-      - events
-      - namespaces
-      - namespaces/status
-      - nodes
-      - nodes/logs
-      - nodes/metrics
-      - nodes/proxy
-      - nodes/spec
-      - nodes/stats
-      - persistentvolumes
-      - persistentvolumeclaims
-      - pods
-      - pods/status
-      - replicationcontrollers
-      - replicationcontrollers/status
-      - resourcequotas
-      - services
-    verbs:
-      - get
-      - list
-      - watch
-  - apiGroups:
-      - apps
-    resources:
-      - daemonsets
-      - deployments
-      - replicasets
-      - statefulsets
-    verbs:
-      - get
-      - list
-      - watch
-  - apiGroups:
-      - extensions
-    resources:
-      - daemonsets
-      - deployments
-      - replicasets
-    verbs:
-      - get
-      - list
-      - watch
-  - apiGroups:
-      - batch
-    resources:
-      - jobs
-      - cronjobs
-    verbs:
-      - get
-      - list
-      - watch
-  - apiGroups:
-      - autoscaling
-    resources:
-      - horizontalpodautoscalers
+      - "*"
     verbs:
       - get
       - list
@@ -118,7 +64,6 @@ spec:
       containers:
         - name: seashell
           image: puckpuck/seashell:0.1
-          imagePullPolicy: IfNotPresent
           env:
             - name: NODE_NAME
               valueFrom:
