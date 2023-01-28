@@ -1,4 +1,4 @@
-FROM nicolaka/netshoot
+FROM jonlabelle/network-tools
 
 RUN echo 'alias ll="ls -Ahlp"' >> ~/.bashrc
 RUN echo 'alias kcurl="curl -k -H \"Authorization: Bearer $(cat /var/run/secrets/kubernetes.io/serviceaccount/token)\""' >> ~/.bashrc
