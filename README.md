@@ -33,7 +33,7 @@ Uses RBAC to leverage the Kubernetes API and Kubelet.
 
 Use `kcurl` instead of `curl` when interacting with the Kubernetes API and Kubelet.
 This alias was created to pass proper authentication tokens to the API when used.
-The `KUBERNETS_API` environment variable exists which points to the Kubernetes API endpoint.
+The `KUBERNETES_API` environment variable exists which points to the Kubernetes API endpoint.
 The `KUBELET` environment variable exists which points to the URL for the Kubelet.
 These allow you to have shorthand access from the command line.
 
