@@ -63,7 +63,7 @@ spec:
       serviceAccountName: seashell
       containers:
         - name: seashell
-          image: puckpuck/seashell:0.1
+          image: puckpuck/seashell:latest
           env:
             - name: NODE_NAME
               valueFrom:

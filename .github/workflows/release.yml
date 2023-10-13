@@ -35,4 +35,6 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: |
             ghcr.io/puckpuck/seashell:${{ github.event.release.tag_name }}
+            ghcr.io/puckpuck/seashell:latest
             puckpuck/seashell:${{ github.event.release.tag_name }}
+            puckpuck/seashell:latest

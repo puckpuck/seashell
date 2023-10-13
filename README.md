@@ -11,13 +11,14 @@ You are encouraged to modify the ClusterRole to restrict to specific resources b
 
 ## Utilities
 The image is based on [jonlabelle/network-tools](https://github.com/jonlabelle/docker-network-tools).
-Uses `9d41292d4bc3` digest published on: 2023-01-21.
 Several utilities are installed including:
 - telnet
 - wget
 - curl
 - awk
 - jq
+- yq
+- jless
 - git
 - tcpdump
 - dig
@@ -25,6 +26,7 @@ Several utilities are installed including:
 - ping
 - traceroute
 - netstat
+- stress
 - ... and more
 
 ## Accessing the Kubernetes API and Kubelet
